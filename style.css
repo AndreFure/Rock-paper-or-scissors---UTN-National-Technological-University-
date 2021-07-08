@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Work+Sans:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #55b9f3;
+  height: 100vh;
+}
+header {
+  position: relative;
+  margin: 0 auto;
+  top: 20px;
+  left: 0;
+  width: 96%;
+  padding: 0px 120px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px white solid;
+  border-radius: 50px;
+}
+.pantalla {
+  display: table;
+  margin-top: 20px;
+  height: 100px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #4da7db, #5bc6ff);
+  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
+  padding: 15px;
+}
+h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Work Sans', sans-serif;
+  color: rgb(253, 5, 141);
+}
+.players {
+  position: relative;
+  margin: 0 auto;
+  top: 30px;
+  left: 0;
+  width: 96%;
+  padding: 0px 120px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  border: 2px white solid;
+  border-radius: 50px;
+}
+.marcador {
+  position: relative;
+  margin-top: 60px;
+  left: 0;
+  width: 96%;
+  padding: 0px 80px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 100px;
+}
+.paltaLogo {
+  margin-left: 20px;
+  height: 150px;
+  width: 150px;
+}
+.computerLogo {
+  position: relative;
+  height: 140px;
+  width: 140px;
+}
+.palta {
+  position: relative;
+  margin-left: 20px;
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(253, 5, 141);
+  font-family: 'Work Sans', sans-serif;
+}
+.machine {
+  padding-right: 0px;
+  position: relative;
+  height: 30px;
+  width: 150px;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(253, 5, 141);
+  font-family: 'Work Sans', sans-serif;
+}
+.mesa {
+  position: relative;
+  height: 650px;
+  padding: 30px;
+  width: 70%;
+  margin: 40px auto;
+  text-align: center;
+  color: rgb(253, 5, 141);
+  font-size: 85px;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #4da7db, #5bc6ff);
+  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border: 2px white solid;
+}
+.choice{
+  display: inline-block;
+}
+.piedra {
+  display: inline-block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 40px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #013043, #012939);
+  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
+  transition: all 0.3s ease;
+}
+.piedra:hover{
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  cursor: pointer;
+
+}
+.papel {
+  display: inline-block;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #013043, #012939);
+  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
+  width: 100px;
+  height: 100px;
+  margin: 40px;
+  transition: all 0.3s ease;
+}
+.papel:hover{
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  cursor: pointer;
+}
+.tijera {
+  display: inline-block;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #013043, #012939);
+  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
+  width: 100px;
+  height: 100px;
+  margin: 40px;
+  transition: all 0.3s ease;
+}
+.tijera:hover{
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  cursor: pointer;
+}
+.user-label {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
+  margin: 300px;
+}
+.comp-label {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
+  margin: 300p
+}
+.progress-done {
+  position: relative;
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  height: 30px;
+  width: 0;
+  transition: 1s ease;
+}
+.ma {
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  font-size: 21px;
+  width: 100%;
+  min-height: 800px;
+  text-align: center;
+  position: absolute;
+  top: 80px;
+  display: block;
+}
+.progress-wrapper {
+  width: 300px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.progressbar {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(-30deg);
+}
+.side {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 254, 254, 0.3);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.bottom {
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+  box-shadow: 10px 10px 50px 5px rgba(90, 90, 90, 0.7);
+}
+.top {
+  transform: translate(0, -100%) rotateX(90deg);
+  transform-origin: bottom;
+}
+.back {
+  transform: translateZ(-60px);
+}
+.cartel {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+.result {
+  height: 20vh;
+}
+@media screen and (max-width: 768px){
+  header{
+    width: 95vw;
+  }
+  .paltaLogo{
+    margin-left: -12vw;
+  }
+  .computerLogo{
+    margin-right: -10vw;
+  }
+  .mesa{
+    width: 95vw;
+  }
+  .p{
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 375px){
+  header{
+    align-items: center;
+    height: 15vh;
+  }
+  .pantalla{
+    margin-top: 0vh;
+    height: 10vh;
+  }
+  h1 #indic{
+    font-size: 15px;
+  }
+  .paltaLogo{
+    width: 15vw;
+    margin-left: -25vw;
+    margin-right: 2vw;
+  }
+  .computerLogo{
+    width: 15vw;
+    margin-right: -25vw;
+    margin-left: 2vw;
+  }
+  .mesa{
+    margin-top: -5vh;
+    width: 95vw;
+    height: 60vh;
+  }
+  .players{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .players p{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .players .palta {
+    margin-left: 0vw;
+  }
+  #user-score{
+    margin-right: 25vw;
+  }
+  #comp-score {
+    margin-left: 25vw;
+  }
+  .players .palta, .players .machine{
+    font-size: 12px;
+  }
+  .p{
+    font-size: 20px;
+  }
+  .cartel{
+    margin-top: -10vh;
+  }
+  .opciones {
+    width: 90vw;
+    padding: 0;
+    margin: 0;
+    margin-left: -4vw;
+  }
+  .piedra, .papel, .tijera{
+    width: 15vw;
+    height: auto;
+  }
+  #p img{
+    height: 56px;
+    width: 15vw;
+  }
+  .choice{
+    width: 30vw;
+    margin-left: -10vw;
+  }
+}
