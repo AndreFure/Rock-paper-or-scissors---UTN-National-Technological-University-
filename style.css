@@ -15,8 +15,11 @@ header {
   top: 20px;
   left: 0;
   width: 96%;
+  height: 170px;
   padding: 0px 120px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
   border: 2px white solid;
   border-radius: 50px;
@@ -29,6 +32,7 @@ header {
   background: linear-gradient(145deg, #4da7db, #5bc6ff);
   box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
   padding: 15px;
+  border: 2px #fff solid;
 }
 h1 {
   display: table-cell;
@@ -62,13 +66,13 @@ h1 {
 }
 .paltaLogo {
   margin-left: 20px;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 100px;
 }
 .computerLogo {
   position: relative;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
 }
 .palta {
   position: relative;
@@ -109,8 +113,9 @@ h1 {
 }
 .choice{
   display: inline-block;
+
 }
-.piedra {
+.piedra, .papel, .tijera {
   display: inline-block;
   border-radius: 50%;
   width: 100px;
@@ -121,41 +126,11 @@ h1 {
   box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
   transition: all 0.3s ease;
 }
-.piedra:hover{
+.piedra:hover, .papel:hover, .tijera:hover{
   background: linear-gradient(to left, #f2709c, #ff9472);
   box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
   cursor: pointer;
 
-}
-.papel {
-  display: inline-block;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #013043, #012939);
-  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
-  width: 100px;
-  height: 100px;
-  margin: 40px;
-  transition: all 0.3s ease;
-}
-.papel:hover{
-  background: linear-gradient(to left, #f2709c, #ff9472);
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-  cursor: pointer;
-}
-.tijera {
-  display: inline-block;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #013043, #012939);
-  box-shadow:  20px 20px 60px #489dcf,-20px -20px 60px #62d5ff;
-  width: 100px;
-  height: 100px;
-  margin: 40px;
-  transition: all 0.3s ease;
-}
-.tijera:hover{
-  background: linear-gradient(to left, #f2709c, #ff9472);
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-  cursor: pointer;
 }
 .user-label {
   background-color: #d8d8d8;

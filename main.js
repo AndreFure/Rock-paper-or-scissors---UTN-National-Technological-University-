@@ -4,8 +4,8 @@ let compScore = 0;
 let userGana = ("Ganaste");
 let compGana = ("Yo gano");
 let empatamos = ("Empatamos");
-let nivelDosComp = ("Que bodrio");
-let nivelDosUser = ("Miralo a este");
+let nivelDosComp = ("Que bodrio, gané de nuevo");
+let nivelDosUser = ("Miralo a este, ganaste");
 let finComp = ("Gane el juego");
 let finUser = ("Perdi");
 let comPartida = ("Piedra, papel o tijera, Ya!");
@@ -35,56 +35,44 @@ if (compScore == 10) {
 
 function ganar(opcionUser, opcionPc) {
   indic_span.innerHTML = comPartida;
-  setInterval(() => {
-    indic_span.innerHTML = start;
-  }, 2000);
-  setTimeout(() => {
-    userScore++;
-    userScore_span.innerHTML = userScore;
-    if (userScore == 5) {
-      result_div.innerHTML = nivelDosUser;
+  indic_span.innerHTML = start;
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  if (userScore == 5) {
+    result_div.innerHTML = nivelDosUser;
+  } else {
+    if (userScore === 10) {
+      result_div.innerHTML = finUser;
+      userScore = 0;
+      compScore = 0;
     } else {
-      if (userScore === 10) {
-        result_div.innerHTML = finUser;
-        userScore = 0;
-        compScore = 0;
-      } else {
-        result_div.innerHTML = userGana;
-      }
+      result_div.innerHTML = userGana;
     }
-  }, 2000);
+  }
 }
 function pierda(opcionUser, opcionPc) {
   indic_span.innerHTML = comPartida;
-  setInterval(() => {
-    indic_span.innerHTML = start;
-  }, 2000);
-  setTimeout(() => {
-    compScore++;
-    compScore_span.innerHTML = compScore;
-    if (compScore == 5) {
-      result_div.innerHTML = nivelDosComp;
+  indic_span.innerHTML = start;
+  compScore++;
+  compScore_span.innerHTML = compScore;
+  if (compScore == 5) {
+    result_div.innerHTML = nivelDosComp;
+  } else {
+    result_div.innerHTML = compGana;
+    if (compScore === 10) {
+      result_div.innerHTML = finComp;
+      userScore = 0;
+      compScore = 0;
     } else {
       result_div.innerHTML = compGana;
-      if (compScore === 10) {
-        result_div.innerHTML = finComp;
-        userScore = 0;
-        compScore = 0;
-      } else {
-        result_div.innerHTML = compGana;
-      }
     }
-  }, 2000);
+  }
 }
 
 function empate(opcionUser, opcionPc) {
   indic_span.innerHTML = comPartida;
-  setInterval(() => {
-    indic_span.innerHTML = start;
-  }, 2000);
-  setTimeout(() => {
-    result_div.innerHTML = empatamos;
-  }, 2000);
+  indic_span.innerHTML = start;
+  result_div.innerHTML = empatamos;
 }
 
 
@@ -141,26 +129,20 @@ main();
 
 
 function miFuncionr() {
-  setTimeout(() => {
-    let elemento = document.getElementById("us");
-    elemento.src = "https://bit.ly/35CnPpV";
-  }, 2000);
+  let elemento = document.getElementById("us");
+  elemento.src = "https://bit.ly/35CnPpV";
 }
 
 
 function miFuncionp() {
-  setTimeout(() => {
-    let elemento = document.getElementById("us");
-    elemento.src = "https://bit.ly/3cUaVre";
-  }, 2000);
+  let elemento = document.getElementById("us");
+  elemento.src = "https://bit.ly/3cUaVre";
 }
 
 
 function miFunciont() {
-  setTimeout(() => {
-    let elemento = document.getElementById("us");
-    elemento.src = "https://bit.ly/2SCQybn";
-  }, 2000);
+  let elemento = document.getElementById("us");
+  elemento.src = "https://bit.ly/2SCQybn";
 }
 
 
